@@ -8,7 +8,6 @@ keyList.forEach(key => {
     playSound(element);
   });
   key.addEventListener('keydown', (event) => {
-    console.log(event);
     if (event.keyCode === 13 || event.keyCode === 32)
       key.classList.add('ativa');
   })
@@ -25,12 +24,12 @@ keyClear.addEventListener('click', clearNumber);
 
 function playSound(element) {
   if (element === null) {
-    console.log('Elemento não encontrado')
+    console.log('Elemento não encontrado');
     return;    
   }
   
   if (element.play === undefined) {
-    console.log('Elemento não tem método play')
+    console.log('Elemento não tem método play');
     return;
   }
 
